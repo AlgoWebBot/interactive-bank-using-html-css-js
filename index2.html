@@ -1,0 +1,22 @@
+<html>
+    <input id="fuck" type="text">
+    <button class="deposite-btn">Deposite</button>
+    <h1>Your Deposite : <span class="deposite">00</span>$</h1>
+    <input id="fuck2" type="text">
+
+
+
+    <script>
+        const button = document.querySelector('.deposite-btn');
+        button.addEventListener("click",()=>{
+            const input1 = document.querySelector("#fuck");
+            // const input2 = document.querySelector("#fuck2");
+            const depositeBalance = document.querySelector('.deposite');
+            const value1 = parseFloat(input1.value); 
+            // const value2 = parseFloat(input2.value); 
+            const value3 = parseFloat(depositeBalance.innerText);
+            const total = value1 + value3;
+            depositeBalance.innerText = total;
+        })
+    </script>
+</html>

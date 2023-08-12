@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baper Bank</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- daisy khala and tailwind mama -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- style -->
+    <style>
+        .font{
+            font-family: 'Merriweather', serif;
+        }
+        .display{
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+    <section class="login-form font">
+        <div class="hero min-h-screen bg-base-200">
+            <div class="hero-content flex-col lg:flex-row-reverse gap-10">
+                <div class="text-center lg:text-left">
+                    <h1 class="text-7xl font-bold">Login now!</h1>
+                    <p class="py-6 max-w-[500px] text-xl">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+                        quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                </div>
+                <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <div class="card-body">
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text">Email</span>
+                            </label>
+                            <input type="text" placeholder="email" class="input input-bordered" />
+                        </div>
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text">Password</span>
+                            </label>
+                            <input type="text" placeholder="password" class="input input-bordered" />
+                            <label class="label">
+                                <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                            </label>
+                        </div>
+                        <div class="form-control mt-6">
+                            <button id="login-btn" class="btn btn-primary">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="banker-hisab font display">
+        <div class="hero min-h-screen bg-base-200">
+            <div class="grid grid-cols-3 gap-10">
+                <div class="card w-96 h-48 bg-neutral text-neutral-content bg-yellow-500">
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Deposite</h2>
+                        <h2 class="card-title taka-deposite text-6xl">00</h2>
+                    </div>
+                </div>
+                <div class="card w-96 h-48 bg-neutral text-neutral-content bg-red-500">
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Withdraw</h2>
+                        <h2 class="card-title taka-withdraw text-6xl">500$</h2>
+                        
+                    </div>
+                </div>
+                <div class="card w-96 h-48 bg-neutral text-neutral-content bg-green-500">
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Balance</h2>
+                        <h2 class="card-title balance text-6xl">2010$</h2>
+                        
+                    </div>
+                </div>
+                <div class="card w-96 h-48 bg-neutral text-neutral-content bg-red-600">
+                    <div class="card-body items-center text-center justify-center">
+                        <div>
+                            <input type="text" id="deposite-amount" class="h-10 w-72 rounded-md text-black p-2 bg-gray-200" placeholder="Write your deposite amount here...">
+                        </div>
+                        <h2 id="deposite" class="card-title text-5xl mt-5 bg-black">Deposite</h2>
+                    </div>
+                </div>
+                <div class="card w-96 h-48 bg-neutral text-neutral-content bg-yellow-600">
+                    <div class="card-body items-center text-center justify-center">
+                        <div>
+                            <input type="text" id="withdraw" class="h-10 w-72 rounded-md text-black p-2 bg-gray-200" placeholder="Write your withdraw amount here...">
+                        </div>
+                        <h2 id="withdraw" class="card-title text-5xl mt-5 bg-black">Withdraw</h2>
+                    </div>
+                </div>
+                <!-- <div class="card w-96 h-48 bg-neutral text-neutral-content bg-green-600 equal-btn">
+                    <div class="card-body items-center text-center justify-center">
+                        <h2 class="card-title text-7xl">=</h2>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <script src="./bank.js"></script>
+</body>
+</html>
