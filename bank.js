@@ -46,7 +46,6 @@ withButton.addEventListener('click', () => {
     let totalBalance = document.querySelector('#total-balance').innerText;
     totalBalance -= withParseFloat;
     document.querySelector('#total-balance').innerText = totalBalance;
-
 })
 
 
