@@ -62,44 +62,44 @@
 
     <section class="banker-hisab font display">
         <div class="hero min-h-screen bg-base-200">
-            <div class="grid grid-cols-3 gap-10">
-                <div class="card w-96 h-48 bg-neutral text-neutral-content bg-yellow-500">
+            <div class="lg:grid lg:grid-cols-3 lg:gap-10">
+                <div class="card w-96 h-48 bg-neutral text-neutral-content bg-yellow-500 mb-4">
                     <div class="card-body items-center text-center">
                         <h2 class="card-title">Deposite</h2>
-                        <h2 class="card-title taka-deposite text-6xl text-black"><span id="depo-balance">00</span>$</h2>
+                        <h2 class="card-title taka-deposite text-6xl text-black">$<span id="depo-balance">00</span></h2>
                     </div>
                 </div>
-                <div class="card w-96 h-48 bg-neutral text-neutral-content bg-red-500">
+                <div class="card w-96 h-48 bg-neutral text-neutral-content bg-red-500 mb-4">
                     <div class="card-body items-center text-center">
                         <h2 class="card-title">Withdraw</h2>
-                        <h2 class="card-title taka-withdraw text-6xl text-black"><span id="with-balance">00</span>$</h2>
+                        <h2 class="card-title taka-withdraw text-6xl text-black">$<span id="with-balance">00</span></h2>
                         
                     </div>
                 </div>
-                <div class="card w-96 h-48 bg-neutral text-neutral-content bg-green-500">
+                <div class="card w-96 h-48 bg-neutral text-neutral-content bg-green-500 mb-4">
                     <div class="card-body items-center text-center">
                         <h2 class="card-title">Balance</h2>
-                        <h2 class="card-title balance text-6xl text-black"><span id="total-balance">1199</span>$</h2>
+                        <h2 class="card-title balance text-6xl text-black">$<span id="total-balance">1199</span></h2>
                         
                     </div>
                 </div>
 
                 <!-- input field -->
-                <div class="card w-96 h-48 bg-neutral text-neutral-content bg-red-600">
+                <div class="card w-96 h-48 bg-neutral text-neutral-content bg-red-600 mb-4">
                     <div class="card-body items-center text-center justify-center">
                         <div>
                             <input type="number" id="deposite-amount" class="h-10 w-72 rounded-md text-black p-2 bg-gray-200" placeholder="$ Write your deposite amount..">
                         </div>
-                        <h2 id="deposite" class="card-title text-5xl mt-5 bg-black cursor-pointer">Deposite</h2>
+                        <button class="btn btn-outline btn-success text-3xl" id="deposite" >Deposite</button>
                     </div>
                 </div>
 
-                <div class="card w-96 h-48 bg-neutral text-neutral-content bg-yellow-600">
+                <div class="card w-96 h-48 bg-neutral text-neutral-content bg-yellow-600 mb-4">
                     <div class="card-body items-center text-center justify-center">
                         <div>
                             <input type="number" id="withdraw-amount" class="h-10 w-72 rounded-md text-black p-2 bg-gray-200" placeholder="$ Write your withdraw amount..">
                         </div>
-                        <h2 id="withdraw" class="card-title text-5xl mt-5 bg-black cursor-pointer">Withdraw</h2>
+                        <button id="withdraw" class="btn btn-outline btn-warning text-3xl">Withdraw</button>
                     </div>
                 </div>
             </div>
