@@ -5,21 +5,48 @@ loginButton.addEventListener('click', () => {
     document.querySelector('.banker-hisab').style.display = "block";
 })
 
+// for display
+// const deposite = document.querySelector('#depo-balance').innerText;
+// const withdraw = document.querySelector('#with-balance').innerText;
+// const total = document.querySelector('#total-balance').innerText;
+// console.log(deposite, withdraw, total);
+
 // for output
-const withdraw = document.querySelector('.taka-withdraw');
-const balance = document.querySelector('.balance');
+    // const depositeAmount = document.querySelector('#deposite-amount').value;
+    // const withdrawAmount = document.querySelector('#withdraw-amount').value;
 
-// for input
-const setDeposite = document.querySelector('#deposite');
-const withdrawInput = document.querySelector('#withdraw').value;
+// button
+const depoButton = document.querySelector('#deposite');
+const withButton = document.querySelector('#withdraw');
 
-setDeposite.addEventListener('click', () => {
+depoButton.addEventListener('click', () => {
     const depositeAmount = document.querySelector('#deposite-amount').value;
-    const value = parseFloat(depositeAmount);
-
-    const deposite = document.querySelector('.taka-deposite');
-    const setDeposite = parseFloat(deposite);
-    const total = setDeposite + value;
-    console.log(total);
+    const depoParseFloat = parseFloat(depositeAmount);
+    const deposite = document.querySelector('#depo-balance').innerText;
+    const depositeParseFloat = parseFloat(deposite);
+    let total = depoParseFloat + depositeParseFloat;
+    document.querySelector('#depo-balance').innerText = total;
+    document.querySelector('#deposite-amount').value = '';
+    // total
+    const totalAmount = document.querySelector('#total-balance').innerText;
+    const totalParseFloat = parseFloat(document.querySelector('#total-balance').innerText);
+    let displayTotal = depoParseFloat + totalParseFloat;
+    document.querySelector('#total-balance').innerText = displayTotal;
+    document.querySelector('#deposite-amount').value = '';
+})
+withButton.addEventListener('click', () => {
+    const withdrawAmount = document.querySelector('#withdraw-amount').value;
+    const withParseFloat = parseFloat(withdrawAmount);
+    
+    const withdraw = document.querySelector('#with-balance').innerText;
+    const withdrawParseFloat = parseFloat(withdraw);
+    let total = withParseFloat + withdrawParseFloat;
+    const totalWithdraw = document.querySelector('#with-balance').innerText = total;
+    document.querySelector('#withdraw-amount').value = '';
+    let totalBalance = document.querySelector('#total-balance').innerText;
+    totalBalance -= withParseFloat;
+    document.querySelector('#total-balance').innerText = totalBalance;
 
 })
+
+
